@@ -16,6 +16,10 @@
         <label>Bangbang</label>
         <input type="checkbox" value="bangbang" v-model="blog.categories">
       </div>
+      <label>Auteurs:</label>
+      <select v-model="blog.auteur">
+          <option v-for="auteur in auteurs" :key="auteur">{{auteur}}</option>
+      </select>
     </form>
     <div id="preview">
       <h3>Preview Blog</h3>
@@ -26,6 +30,7 @@
       <ul>
           <li v-for="category in blog.categories" :key="category">{{category}}</li>
       </ul>
+      <p>Auteur du blog: {{blog.auteur}}</p>
     </div>
   </div>
 </template>
@@ -39,8 +44,10 @@ export default {
         content: "",
         categories: [
 
-        ]
-      }
+        ],
+        auteur: ""
+      },
+      auteurs: ['louloulfx', 'xi6xi6xi6', 'Elouan Lfx']
     };
   },
   methods: {}
