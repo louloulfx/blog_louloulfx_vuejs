@@ -1,11 +1,16 @@
 <template>
-<add-blog></add-blog></template>
+  <div>
+    <show-blogs></show-blogs>
+  </div>
+</template>
 
 <script>
-import addBlog from './components/addBlog'
+import addBlog from "./components/addBlog";
+import showBlogs from "./components/showBlogs";
 export default {
   components: {
-    'add-blog': addBlog
+    "add-blog": addBlog,
+    "show-blogs": showBlogs
   },
   data() {
     return {};
@@ -15,17 +20,8 @@ export default {
 </script>
 
 <style>
-body{
+body {
   margin: 0;
-  font-family:'Nunito SemiBold';
-}
-
-#checkboxes input {
-display: inline-block;
-margin-right: 10px;
-}
-
-#checkboxes label {
-  display: inline-block;
+  font-family: "Nunito SemiBold";
 }
 </style>

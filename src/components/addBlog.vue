@@ -23,7 +23,7 @@
       <button v-on:click.prevent="post">Ajout d'un Blog</button>
     </form>
     <div v-if="submitted">
-        <h3>Merci pour votre ajout de blog</h3>
+      <h3>Merci pour votre ajout de blog</h3>
     </div>
     <div id="preview">
       <h3>Preview Blog</h3>
@@ -50,7 +50,7 @@ export default {
         auteur: ""
       },
       auteurs: ["louloulfx", "xi6xi6xi6", "Elouan Lfx"],
-      submitted: false,
+      submitted: false
     };
   },
   methods: {
@@ -97,7 +97,14 @@ textarea {
   border: 1px dotted #ccc;
   margin: 30px 0;
 }
+#checkboxes input {
+  display: inline-block;
+  margin-right: 10px;
+}
 
+#checkboxes label {
+  display: inline-block;
+}
 h3 {
   margin-top: 10px;
 }
