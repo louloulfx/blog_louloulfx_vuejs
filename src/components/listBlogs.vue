@@ -1,10 +1,9 @@
 <template>
   <div v-theme:column="'narrow'" id="show-blogs">
-    <h1>Voici tout les articles disponibles</h1>
+    <h1>Listes des titres de blogs</h1>
     <input type="text" v-model="search" placeholder="Recherche d'article">
     <div v-for="blog in filteredBlogs" :key="blog" class="single-blog">
       <h2 v-rainbow>{{blog.title | to-uppercase}}</h2>
-      <article>{{blog.body | snippet}}</article>
     </div>
   </div>
 </template>
