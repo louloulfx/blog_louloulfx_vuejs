@@ -20,7 +20,7 @@ export default {
   methods: {},
   created() {
     this.$http
-      .get("http://jsonplaceholder.typicode.com/posts")
+      .get("https://vuejs1-be24d.firebaseio.com/posts.json")
       .then(function(data) {
         this.blogs = data.body.slice(0, 10);
       });
