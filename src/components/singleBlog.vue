@@ -1,6 +1,6 @@
 <template>
   <div id="single-blog">
-    <h1>{{ blog.title }}</h1>
+    <h1 v-rainbow>{{ blog.title }}</h1>
     <article>{{ blog.content }}</article>
     <p>Auteur: {{ blog.auteur }}</p>
     <ul>
@@ -25,6 +25,17 @@ export default {
       .then(function(data) {
         this.blog = data;
       });
+  },
+  directives: {
+    rainbow: {
+      bind(el, binding, vnode) {
+        el.style.color =
+          "#" +
+          Math.random()
+            .toString()
+            .slice(2, 8);
+      }
+    }
   }
 };
 </script>
